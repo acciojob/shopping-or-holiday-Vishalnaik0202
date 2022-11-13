@@ -4,15 +4,21 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<script>
+        function showDetails(item) {
+          var itemType = item.getAttribute("data-item-type");
+          alert("The " + item.innerHTML + " is a " + itemType + ".");
+        }
+        </script>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
 	<div class="shoppingList">
-        <ol>
-            <li value="shoppingList">Kawasaki Ninja 300 </li>
-            <li value="shoppingList">Tata Harriedr </li>
-            <li value="shoppingList">iPhone 14 pro </li>
+         <ol>
+            <li value="shoppingList" onclick="showDetails(this)" id="item" data-item-type="Kawasaki Ninja 300">Bike </li>
+            <li value="shoppingList" onclick="showDetails(this)" id="item" data-item-type="Tata Harrier">Car</li>
+            <li value="shoppingList" onclick="showDetails(this)" id="item" data-item-type="iPhone 14 pro">Phone </li>
         </ol>
     </div>
     <div class="holidayList">
